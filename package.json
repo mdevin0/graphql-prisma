@@ -1,0 +1,25 @@
+{
+  "name": "graphql-basics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mateus Devino",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js -e js,graphql --exec babel-node",
+    "get-schema": "graphql get-schema -p prisma"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "env-cmd": "^10.1.0",
+    "graphql-cli": "^3.0.14",
+    "graphql-yoga": "1.18.3",
+    "prisma-binding": "^2.3.16",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
